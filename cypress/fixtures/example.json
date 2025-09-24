@@ -1,0 +1,40 @@
+{
+  "validUser": {
+    "username": "test@example.com",
+    "password": "Test123!",
+    "firstName": "Test",
+    "lastName": "User"
+  },
+  "invalidUsers": [
+    {
+      "username": "invalid@",
+      "password": "123",
+      "error": "Geçersiz email formatı"
+    },
+    {
+      "username": "test@example.com",
+      "password": "wrong",
+      "error": "Kullanıcı adı veya şifre hatalı"
+    }
+  ],
+  "userList": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "role": "Admin"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "role": "User"
+    },
+    {
+      "id": 3,
+      "name": "Bob Johnson",
+      "email": "bob@example.com",
+      "role": "User"
+    }
+  ]
+}

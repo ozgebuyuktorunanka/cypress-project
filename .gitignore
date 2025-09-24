@@ -1,0 +1,7 @@
+node_modules/
+tests/videos/
+tests/screenshots/
+tests/downloads/
+.env
+.env.local
+*.log
