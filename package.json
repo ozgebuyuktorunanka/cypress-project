@@ -11,7 +11,18 @@
     "cy:run": "cypress run",
     "cy:run:chrome": "cypress run --browser chrome",
     "cy:run:headed": "cypress run --headed",
-    "cy:run:spec": "cypress run --spec cypress/e2e/first-test.cy.js"
+    "cy:run:spec": "cypress run --spec cypress/e2e/first-test.cy.js",
+    "cy:open:dev": "cypress open --env configFile=dev",
+    "cy:open:staging": "cypress open --env configFile=staging",
+    "cy:run:smoke": "cypress run --spec 'cypress/e2e/smoke/**/*.cy.js'",
+    "cy:run:regression": "cypress run --spec 'cypress/e2e/regression/**/*.cy.js'",
+    "cy:run:firefox": "cypress run --browser firefox",
+    "cy:run:edge": "cypress run --browser edge",
+    "test:dev": "cypress run --env configFile=dev",
+    "test:staging": "cypress run --env configFile=staging",
+    "test:prod": "cypress run --env configFile=prod --spec 'cypress/e2e/smoke/**/*.cy.js'",
+    "test:report": "cypress run --reporter mochawesome",
+    "report:generate": "mochawesome-merge cypress/reports/*.json > cypress/reports/report.json && marge cypress/reports/report.json -f index -o cypress/reports"
   },
   "devDependencies": {
     "@faker-js/faker": "^10.0.0",
