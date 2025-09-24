@@ -8,15 +8,15 @@ A robust end-to-end testing framework built with Cypress for automated web appli
 
 ## 📋 Table of Contents
 
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Project Structure](#project-structure)
-- [Configuration](#configuration)
-- [Running Tests](#running-tests)
-- [CI/CD Integration](#cicd-integration)
-- [Best Practices](#best-practices)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
+- [Prerequisites](#-prerequisites)
+- [Installation](#-installation)
+- [Project Structure](#-project-structure)
+- [Configuration](#-configuration)
+- [Running Tests](#-running-tests)
+- [CI/CD Integration](#-cicd-integration)
+- [Best Practices](#-best-practices)
+- [Troubleshooting](#-troubleshooting)
+- [Contributing](#-contributing)
 
 ## 🔧 Prerequisites
 
