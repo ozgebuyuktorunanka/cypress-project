@@ -5,6 +5,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A robust end-to-end testing framework built with Cypress for automated web application testing. This framework provides a scalable structure for UI automation testing with support for multiple environments, custom commands, and comprehensive reporting.
+<p align="left">
+  <img src="assets/terminalScreenshot.png" alt="Project Screenshot" width="500">
+</p>
 
 ## 📋 Table of Contents
 
