@@ -1,3 +1,7 @@
+/**
+ * THIS FILE IS INCLUDED REUSABLE CUSTOM COMMANDS
+ */
+
 // Login command
 Cypress.Commands.add('login', (username, password) => {
   cy.session([username, password], () => {
@@ -9,17 +13,17 @@ Cypress.Commands.add('login', (username, password) => {
   })
 })
 
-// Data attribute ile element seçme
+// Element selection with Data attribute
 Cypress.Commands.add('getByData', (selector) => {
   return cy.get(`[data-cy=${selector}]`)
 })
 
-// Dosya yükleme komutu
+// File upload command
 Cypress.Commands.add('uploadFile', (fileName, selector) => {
   cy.get(selector).selectFile(`tests/fixtures/${fileName}`)
 })
 
-// API token alma
+// Take API Token
 Cypress.Commands.add('getAuthToken', () => {
   cy.request('POST', '/api/auth/login', {
     username: Cypress.env('TEST_USER'),
@@ -29,7 +33,7 @@ Cypress.Commands.add('getAuthToken', () => {
   })
 })
 
-// Tablo verisi kontrol etme
+// Control the table information
 Cypress.Commands.add('validateTableData', (tableSelector, expectedData) => {
   cy.get(`${tableSelector} tbody tr`).should('have.length', expectedData.length)
   
@@ -42,9 +46,15 @@ Cypress.Commands.add('validateTableData', (tableSelector, expectedData) => {
   })
 })
 
-// Waitfor element to be stable (animasyon bitene kadar bekle)
+// Waitfor element to be stable
 Cypress.Commands.add('waitForAnimation', (selector) => {
   cy.get(selector).should('exist')
   cy.wait(300) // Kısa bekleme
   cy.get(selector).should('not.have.class', 'animating')
+})
+
+//Page Loading and Navigation Wait Process
+Cypress.Commands.add('waitForPageChange',(expectedUrl)=>{
+  cy.url().should('include',expectedUrl)
+  cy.get('body').should('be.visible')
 })
